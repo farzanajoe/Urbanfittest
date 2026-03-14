@@ -2,10 +2,58 @@ from flask import Flask, request, jsonify, render_template
 import pandas as pd
 import joblib
 import numpy as np
+import os
 
 app = Flask(__name__)
+
+# ── Auto-train model if it doesn't exist ────────────────────
+if not os.path.exists("churn_model.pkl"):
+    print("churn_model.pkl not found — training now...")
+
+    from sklearn.preprocessing import OneHotEncoder
+    from sklearn.model_selection import train_test_split
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.compose import ColumnTransformer
+    from sklearn.pipeline import Pipeline
+
+    df = pd.read_csv("data/urbanfit_customer_churn_dataset.csv")
+
+    features = [
+        "age", "gender", "location", "tenure_months", "monthly_spend_gbp",
+        "avg_weekly_sessions", "days_since_last_login", "app_engagement_type",
+        "support_tickets_last_6m", "plan_type", "discount_received", "referral_source"
+    ]
+    target = "churned"
+
+    X = df[features]
+    y = df[target]
+
+    categorical = ["gender", "location", "app_engagement_type", "plan_type", "referral_source"]
+    numerical   = ["age", "tenure_months", "monthly_spend_gbp", "avg_weekly_sessions",
+                   "days_since_last_login", "support_tickets_last_6m", "discount_received"]
+
+    preprocessor = ColumnTransformer(transformers=[
+        ("cat", OneHotEncoder(handle_unknown="ignore"), categorical),
+        ("num", "passthrough", numerical)
+    ])
+
+    pipeline = Pipeline([
+        ("preprocessing", preprocessor),
+        ("classifier", RandomForestClassifier(n_estimators=200, random_state=42))
+    ])
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    pipeline.fit(X_train, y_train)
+
+    accuracy = pipeline.score(X_test, y_test)
+    print(f"Model Accuracy: {accuracy:.2f}")
+
+    joblib.dump(pipeline, "churn_model.pkl")
+    print("churn_model.pkl saved successfully!")
+
 model = joblib.load("churn_model.pkl")
 
+# ── Routes ───────────────────────────────────────────────────
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -18,18 +66,18 @@ def result():
 def predict():
     data = request.json
 
-    age                    = int(data["age"])
-    gender                 = data["gender"]
-    location               = data["location"].title()
-    tenure_months          = int(data["tenure_months"])
-    monthly_spend_gbp      = float(data["monthly_spend_gbp"])
-    avg_weekly_sessions    = float(data["avg_weekly_sessions"])
-    days_since_last_login  = int(data["days_since_last_login"])
-    app_engagement_type    = data["app_engagement_type"]
+    age                     = int(data["age"])
+    gender                  = data["gender"]
+    location                = data["location"].title()
+    tenure_months           = int(data["tenure_months"])
+    monthly_spend_gbp       = float(data["monthly_spend_gbp"])
+    avg_weekly_sessions     = float(data["avg_weekly_sessions"])
+    days_since_last_login   = int(data["days_since_last_login"])
+    app_engagement_type     = data["app_engagement_type"]
     support_tickets_last_6m = int(data["support_tickets_last_6m"])
-    plan_type              = data["plan_type"]
-    discount_received      = int(data["discount_received"])
-    referral_source        = data["referral_source"]
+    plan_type               = data["plan_type"]
+    discount_received       = int(data["discount_received"])
+    referral_source         = data["referral_source"]
 
     new_customer = pd.DataFrame([{
         "age": age,
@@ -46,7 +94,6 @@ def predict():
         "referral_source": referral_source
     }])
 
-    # ── Prediction ──────────────────────────────────────────
     prob = model.predict_proba(new_customer)[0, 1]
 
     if prob > 0.7:
@@ -56,7 +103,6 @@ def predict():
     else:
         risk = "LOW"
 
-    # ── Top 3 churn drivers ──────────────────────────────────
     X_transformed = model.named_steps["preprocessing"].transform(new_customer)
     if hasattr(X_transformed, "toarray"):
         X_array = X_transformed.toarray()[0]
@@ -73,55 +119,43 @@ def predict():
     ).head(3)
     drivers = [f.replace("num__", "").replace("cat__", "") for f in top3["Feature"].tolist()]
 
-    # ── Recommendations ──────────────────────────────────────
     short_term = []
     long_term  = []
 
     if age <= 25:
         short_term.append("Recommend short, high-energy workouts suitable for younger users.")
         long_term.append("Introduce gamified fitness challenges and social competitions.")
-
     if gender == "Female":
         short_term.append("Promote popular group workouts such as yoga or pilates.")
         long_term.append("Expand community-based group fitness programs.")
-
     if location in ["London", "Leeds", "Bristol", "Newcastle"]:
         short_term.append("Send city-based fitness campaigns or challenges.")
         long_term.append("Develop local fitness communities and events.")
-
     if tenure_months <= 3:
         short_term.append("Send onboarding reminders and workout guidance for new members.")
         long_term.append("Improve the onboarding journey to help users build habits early.")
-
     if monthly_spend_gbp > 70:
         short_term.append("Offer loyalty rewards for high-paying members.")
         long_term.append("Provide premium-exclusive features or classes.")
-
     if discount_received == 0:
         short_term.append("Provide a temporary retention discount or promotional offer.")
         long_term.append("Introduce a loyalty-based discount program.")
-
     if avg_weekly_sessions <= 2:
         short_term.append("Send reminders encouraging at least 3 workouts per week.")
         long_term.append("Introduce streak rewards or achievement badges.")
-
     if days_since_last_login >= 30:
         short_term.append("Send re-engagement notifications encouraging the user to return.")
         short_term.append("Email personalised workout suggestions.")
         long_term.append("Implement AI-based personalised workout recommendations.")
-
     if app_engagement_type == "On-Demand":
         short_term.append("Encourage participation in Live Classes.")
         long_term.append("Allow on-demand users to schedule upcoming sessions.")
-
     if support_tickets_last_6m >= 3:
         short_term.append("Prioritise faster customer support response.")
         long_term.append("Improve the customer support system to reduce response time.")
-
     if plan_type == "Basic":
         short_term.append("Promote additional features available in higher plans.")
         long_term.append("Introduce extra value benefits for Basic plan users.")
-
     if referral_source == "Paid Ad":
         short_term.append("Send targeted engagement emails for newly acquired users.")
         long_term.append("Improve marketing targeting to attract higher-retention customers.")
