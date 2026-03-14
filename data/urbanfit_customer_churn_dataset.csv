@@ -1,0 +1,201 @@
+customer_id,age,gender,location,tenure_months,monthly_spend_gbp,avg_weekly_sessions,days_since_last_login,app_engagement_type,support_tickets_last_6m,plan_type,discount_received,referral_source,churned
+1,56,Female,Manchester,33,39.11,4.7,1,Live Classes,2,Standard,0,Friend Referral,0
+2,46,Male,Nottingham,30,57.94,0.6,13,Mixed,1,Standard,0,Paid Ad,0
+3,32,Female,Liverpool,23,38.83,3.8,3,Live Classes,1,Basic,1,Friend Referral,0
+4,60,Female,Birmingham,10,37.32,3.6,1,Live Classes,1,Standard,0,Paid Ad,0
+5,25,Female,London,5,54.15,4.4,6,Live Classes,1,Standard,1,Social Media,0
+6,38,Male,London,34,42.21,3.8,3,Live Classes,0,Basic,0,Social Media,0
+7,56,Male,London,31,27.27,5.0,0,Live Classes,0,Basic,0,Friend Referral,1
+8,36,Female,Bristol,10,51.27,5.8,4,Live Classes,0,Premium,0,Friend Referral,0
+9,40,Female,Leeds,19,26.12,2.4,2,Live Classes,1,Standard,1,Social Media,0
+10,28,Male,Sheffield,32,27.21,1.8,60,On-Demand,0,Basic,0,Influencer,1
+11,28,Female,London,1,24.82,2.8,8,Mixed,1,Standard,0,Friend Referral,0
+12,41,Female,Nottingham,5,23.77,2.1,2,On-Demand,3,Basic,1,Social Media,0
+13,53,Male,Bristol,4,39.0,3.9,4,Mixed,0,Standard,0,Paid Ad,0
+14,57,Other,London,16,31.91,5.5,3,Live Classes,4,Basic,0,Paid Ad,0
+15,41,Female,London,24,10.0,1.3,61,On-Demand,4,Basic,0,Paid Ad,1
+16,20,Male,London,16,31.78,1.1,82,Mixed,0,Basic,1,Paid Ad,1
+17,39,Male,Manchester,2,28.79,1.9,40,On-Demand,1,Premium,0,Paid Ad,1
+18,19,Female,Birmingham,28,45.71,4.5,1,Mixed,3,Standard,1,Social Media,0
+19,41,Male,Manchester,32,28.24,3.8,1,Live Classes,1,Basic,1,Paid Ad,0
+20,61,Female,Manchester,27,65.47,1.1,28,Mixed,1,Basic,0,Paid Ad,1
+21,47,Male,Leeds,20,51.76,5.6,2,Live Classes,0,Standard,0,Paid Ad,0
+22,55,Male,London,24,30.32,4.8,3,Mixed,2,Basic,0,Friend Referral,0
+23,19,Male,Manchester,12,48.8,0.6,50,On-Demand,0,Basic,0,Social Media,1
+24,38,Female,Manchester,35,41.3,4.1,4,Mixed,1,Premium,1,Influencer,0
+25,50,Male,Manchester,33,37.8,4.7,3,Live Classes,2,Basic,1,Paid Ad,0
+26,29,Female,Sheffield,33,44.63,2.6,9,On-Demand,1,Standard,0,Social Media,0
+27,39,Female,London,12,35.65,0.9,9,Mixed,2,Premium,0,Influencer,0
+28,61,Female,Leeds,3,37.88,0.9,90,On-Demand,1,Basic,0,Friend Referral,1
+29,42,Male,Birmingham,1,44.88,1.1,17,On-Demand,2,Basic,0,Social Media,0
+30,44,Male,London,33,59.63,5.1,1,Mixed,2,Basic,0,Social Media,0
+31,59,Female,Leeds,10,38.01,5.5,0,Live Classes,2,Premium,0,Paid Ad,0
+32,45,Male,London,29,29.55,1.2,15,On-Demand,1,Premium,0,Friend Referral,0
+33,33,Female,London,13,10.65,1.8,10,On-Demand,0,Standard,0,Influencer,0
+34,32,Male,Nottingham,12,58.54,1.4,17,Mixed,2,Basic,0,Friend Referral,0
+35,64,Female,Nottingham,31,31.84,1.5,15,Live Classes,0,Standard,0,Friend Referral,0
+36,61,Male,Bristol,2,41.42,5.1,43,On-Demand,0,Premium,0,Paid Ad,1
+37,20,Female,London,35,57.87,2.3,2,Mixed,0,Standard,1,Influencer,0
+38,54,Male,London,23,37.73,2.2,1,Mixed,0,Premium,0,Paid Ad,0
+39,24,Female,Liverpool,17,32.66,1.8,8,On-Demand,1,Premium,1,Social Media,0
+40,38,Female,Manchester,26,52.04,3.8,4,On-Demand,0,Standard,1,Friend Referral,0
+41,26,Female,London,8,40.53,2.6,5,Live Classes,1,Standard,0,Friend Referral,1
+42,56,Male,Birmingham,29,42.03,4.6,0,Live Classes,1,Basic,1,Social Media,0
+43,35,Male,London,26,16.72,1.6,13,On-Demand,1,Basic,0,Paid Ad,0
+44,21,Female,Newcastle,10,49.47,4.8,3,Live Classes,1,Standard,0,Friend Referral,0
+45,42,Male,London,26,39.51,3.8,1,On-Demand,3,Basic,0,Social Media,0
+46,31,Male,Leeds,34,18.54,1.1,13,Live Classes,1,Premium,0,Friend Referral,1
+47,26,Male,London,7,40.82,2.8,5,Mixed,0,Premium,0,Paid Ad,0
+48,43,Male,Birmingham,4,10.25,5.2,0,Mixed,1,Standard,0,Friend Referral,0
+49,19,Female,Leeds,11,63.1,5.6,52,On-Demand,2,Basic,0,Social Media,1
+50,37,Female,London,29,21.78,3.1,4,On-Demand,4,Basic,0,Paid Ad,0
+51,45,Male,Nottingham,25,54.34,3.1,5,Live Classes,2,Basic,0,Social Media,1
+52,64,Male,Sheffield,21,25.24,5.6,5,Mixed,2,Standard,1,Paid Ad,0
+53,24,Male,Nottingham,10,41.72,3.7,0,Mixed,1,Standard,0,Paid Ad,0
+54,61,Female,Newcastle,9,24.05,0.7,4,Live Classes,0,Premium,0,Influencer,0
+55,25,Female,Birmingham,24,46.97,5.5,4,Mixed,1,Basic,1,Social Media,0
+56,64,Male,Newcastle,35,32.18,1.9,16,Mixed,4,Premium,0,Social Media,0
+57,52,Male,London,35,40.61,3.7,4,Mixed,2,Premium,0,Social Media,0
+58,31,Male,London,18,35.18,1.4,90,Mixed,0,Basic,0,Friend Referral,1
+59,34,Male,London,32,18.61,0.7,56,On-Demand,1,Premium,0,Social Media,1
+60,53,Male,Manchester,24,41.05,2.2,67,On-Demand,3,Basic,1,Friend Referral,0
+61,57,Female,Manchester,23,28.96,4.8,4,Mixed,1,Basic,0,Friend Referral,0
+62,21,Female,London,32,47.54,2.0,17,Mixed,3,Standard,1,Friend Referral,0
+63,19,Male,Bristol,12,32.17,1.7,9,Live Classes,0,Basic,0,Social Media,0
+64,23,Male,Manchester,13,34.08,1.7,18,Live Classes,1,Standard,0,Influencer,0
+65,59,Female,London,23,55.2,3.3,1,Live Classes,1,Standard,0,Social Media,0
+66,21,Female,Birmingham,25,63.58,5.9,2,Mixed,2,Standard,0,Influencer,0
+67,46,Male,London,35,44.43,3.0,3,Mixed,0,Basic,0,Paid Ad,0
+68,35,Female,Bristol,30,31.55,3.6,3,Live Classes,0,Standard,1,Paid Ad,0
+69,43,Female,London,17,30.5,5.2,7,On-Demand,0,Standard,1,Influencer,0
+70,61,Male,Cardiff,20,25.18,3.4,0,Live Classes,1,Standard,0,Paid Ad,0
+71,51,Male,Sheffield,25,27.5,1.5,17,Mixed,2,Basic,1,Paid Ad,0
+72,27,Male,London,22,31.72,2.1,1,Mixed,2,Basic,1,Friend Referral,0
+73,53,Female,London,13,58.57,2.2,3,Mixed,3,Standard,0,Friend Referral,0
+74,31,Male,Bristol,19,32.63,2.7,8,On-Demand,3,Basic,0,Paid Ad,0
+75,48,Female,Liverpool,12,20.29,2.8,5,On-Demand,2,Standard,0,Paid Ad,0
+76,32,Female,Liverpool,19,35.5,4.9,0,Live Classes,0,Standard,0,Paid Ad,1
+77,25,Male,Sheffield,12,37.14,2.4,2,Live Classes,0,Standard,0,Social Media,0
+78,31,Male,London,9,35.43,3.1,4,Mixed,1,Standard,0,Paid Ad,0
+79,40,Male,Manchester,7,44.6,3.9,1,Mixed,1,Premium,1,Paid Ad,0
+80,57,Male,London,28,35.83,2.6,5,Mixed,1,Premium,0,Influencer,1
+81,38,Male,Bristol,14,44.22,5.1,3,Mixed,4,Premium,0,Friend Referral,0
+82,33,Female,Leeds,31,25.64,3.7,1,On-Demand,1,Premium,1,Friend Referral,0
+83,62,Female,London,19,56.37,2.1,11,Mixed,1,Basic,1,Social Media,0
+84,35,Female,London,16,38.03,4.4,57,Mixed,2,Basic,0,Friend Referral,1
+85,64,Female,London,5,39.8,3.4,0,Mixed,0,Standard,1,Social Media,0
+86,41,Other,London,35,25.59,3.4,3,Live Classes,0,Basic,0,Paid Ad,0
+87,43,Female,Liverpool,12,40.66,3.1,1,Live Classes,1,Standard,0,Friend Referral,0
+88,42,Male,Leeds,25,42.81,3.2,4,Live Classes,0,Basic,0,Social Media,0
+89,62,Male,Newcastle,21,20.96,4.7,1,Mixed,1,Standard,0,Friend Referral,0
+90,58,Male,Birmingham,23,15.09,1.1,11,On-Demand,1,Standard,0,Social Media,0
+91,46,Male,London,16,38.52,2.3,6,Live Classes,0,Standard,0,Friend Referral,0
+92,32,Male,Sheffield,14,29.13,0.9,62,On-Demand,0,Standard,0,Social Media,1
+93,62,Male,Sheffield,31,38.12,4.6,0,On-Demand,2,Premium,0,Social Media,0
+94,18,Female,Birmingham,5,19.51,2.0,9,On-Demand,0,Basic,0,Influencer,0
+95,42,Male,Sheffield,35,16.27,5.4,2,Live Classes,2,Premium,1,Social Media,0
+96,24,Female,Birmingham,23,37.48,3.4,1,Mixed,2,Basic,0,Friend Referral,0
+97,26,Female,Birmingham,29,30.8,4.9,6,On-Demand,2,Premium,0,Influencer,0
+98,41,Male,Manchester,11,10.0,5.9,3,Mixed,0,Standard,0,Friend Referral,0
+99,18,Female,London,18,51.12,5.1,19,On-Demand,0,Basic,0,Paid Ad,1
+100,61,Male,London,12,19.31,5.3,63,Mixed,3,Basic,0,Influencer,1
+101,25,Male,London,9,65.88,2.7,11,On-Demand,2,Standard,1,Friend Referral,0
+102,41,Male,Leeds,10,27.51,3.5,5,On-Demand,0,Basic,0,Social Media,0
+103,28,Female,London,17,39.82,1.9,2,Mixed,2,Basic,0,Paid Ad,0
+104,34,Female,Birmingham,7,54.76,1.6,8,On-Demand,0,Standard,0,Friend Referral,0
+105,25,Male,Newcastle,13,52.75,3.3,5,Live Classes,0,Standard,0,Friend Referral,0
+106,52,Female,London,9,58.83,3.8,1,Live Classes,0,Standard,0,Friend Referral,0
+107,52,Other,Manchester,27,16.72,2.4,6,Mixed,2,Premium,0,Friend Referral,0
+108,50,Other,Sheffield,2,21.37,3.6,4,On-Demand,3,Standard,0,Friend Referral,0
+109,22,Male,London,5,37.71,5.4,26,Mixed,2,Standard,0,Paid Ad,1
+110,59,Female,London,29,45.08,3.6,2,Live Classes,0,Basic,0,Social Media,0
+111,56,Female,London,19,34.87,4.5,0,Live Classes,2,Standard,0,Social Media,0
+112,58,Male,London,8,15.34,4.9,24,Live Classes,5,Basic,1,Social Media,1
+113,45,Female,Newcastle,1,40.96,5.9,2,Live Classes,1,Premium,1,Paid Ad,0
+114,24,Female,Bristol,22,32.67,3.8,0,On-Demand,2,Premium,1,Friend Referral,0
+115,26,Male,Leeds,17,32.53,4.9,6,Live Classes,3,Standard,0,Paid Ad,0
+116,25,Male,Newcastle,7,10.0,5.8,16,On-Demand,1,Basic,0,Friend Referral,1
+117,29,Male,Bristol,25,44.57,5.7,2,Mixed,0,Premium,0,Social Media,1
+118,51,Male,London,4,36.74,1.3,13,Live Classes,0,Standard,0,Influencer,0
+119,50,Female,Nottingham,6,56.54,2.7,73,On-Demand,0,Basic,0,Paid Ad,1
+120,40,Male,Birmingham,31,34.11,2.3,1,Mixed,1,Basic,0,Influencer,0
+121,41,Other,Bristol,19,41.8,1.0,21,On-Demand,0,Standard,0,Paid Ad,0
+122,54,Female,Newcastle,27,44.98,4.0,3,On-Demand,1,Basic,1,Social Media,0
+123,52,Male,London,10,14.05,4.5,1,Mixed,2,Premium,0,Friend Referral,0
+124,61,Male,London,26,66.4,5.2,3,Mixed,1,Basic,0,Paid Ad,0
+125,57,Male,London,19,29.83,1.2,13,Live Classes,2,Basic,0,Social Media,0
+126,39,Male,Manchester,3,40.93,5.3,1,Mixed,1,Premium,1,Influencer,0
+127,44,Male,Newcastle,13,42.69,4.0,46,On-Demand,0,Basic,0,Social Media,1
+128,52,Female,Bristol,28,25.22,4.4,2,Live Classes,1,Standard,0,Friend Referral,0
+129,18,Female,London,20,57.16,5.5,3,Live Classes,1,Basic,0,Friend Referral,0
+130,52,Male,Birmingham,28,38.19,3.9,4,Mixed,1,Basic,0,Friend Referral,0
+131,54,Male,Manchester,8,32.44,2.3,9,On-Demand,2,Standard,0,Social Media,0
+132,64,Male,London,1,36.66,5.0,0,Live Classes,6,Standard,1,Social Media,0
+133,31,Male,London,3,44.17,2.5,11,On-Demand,1,Standard,0,Paid Ad,1
+134,20,Male,London,13,35.13,0.7,2,Live Classes,0,Standard,0,Influencer,0
+135,18,Male,Nottingham,28,45.58,5.1,2,Live Classes,1,Standard,0,Friend Referral,0
+136,22,Male,London,25,14.78,2.4,6,Live Classes,1,Basic,0,Friend Referral,0
+137,43,Male,Birmingham,33,26.02,4.8,3,Live Classes,1,Basic,0,Friend Referral,0
+138,31,Male,Liverpool,6,10.0,2.5,3,Live Classes,1,Premium,0,Influencer,0
+139,56,Male,Manchester,32,58.96,5.2,2,Live Classes,2,Standard,0,Paid Ad,0
+140,44,Male,Cardiff,21,58.81,1.7,8,On-Demand,1,Standard,0,Friend Referral,0
+141,26,Female,Nottingham,16,42.52,5.9,1,Live Classes,2,Basic,0,Friend Referral,0
+142,32,Female,London,21,22.85,4.8,4,Live Classes,2,Basic,0,Friend Referral,1
+143,32,Female,Birmingham,11,63.68,1.1,14,Mixed,2,Standard,0,Paid Ad,0
+144,43,Male,London,35,27.75,3.6,1,Live Classes,3,Premium,1,Social Media,0
+145,59,Female,London,19,32.44,5.9,4,Mixed,0,Standard,0,Influencer,0
+146,30,Female,London,20,36.91,3.1,3,Live Classes,4,Premium,0,Friend Referral,0
+147,49,Male,Leeds,18,40.42,1.5,18,Live Classes,2,Standard,1,Friend Referral,0
+148,56,Female,Birmingham,14,42.73,3.2,4,Live Classes,2,Basic,0,Influencer,0
+149,49,Male,London,15,43.21,3.3,1,Live Classes,0,Basic,1,Friend Referral,0
+150,21,Female,London,31,33.27,4.6,1,Live Classes,0,Basic,0,Paid Ad,0
+151,47,Female,Newcastle,1,43.02,4.3,4,Live Classes,2,Basic,1,Friend Referral,0
+152,54,Male,London,3,32.73,2.7,6,Live Classes,2,Premium,0,Friend Referral,0
+153,40,Female,London,16,41.95,1.7,11,Live Classes,1,Standard,0,Friend Referral,0
+154,56,Female,Birmingham,23,40.97,4.0,3,Live Classes,2,Standard,0,Social Media,0
+155,62,Male,Cardiff,11,44.15,2.8,8,Live Classes,0,Basic,1,Influencer,0
+156,32,Male,London,12,42.66,1.2,7,On-Demand,0,Basic,1,Influencer,0
+157,60,Female,Liverpool,10,29.69,5.5,4,On-Demand,0,Basic,0,Friend Referral,0
+158,46,Male,Sheffield,32,40.5,4.3,2,Mixed,1,Basic,0,Paid Ad,0
+159,53,Female,London,16,42.84,4.3,2,Live Classes,1,Standard,1,Influencer,0
+160,30,Female,Liverpool,8,19.51,5.0,5,Mixed,0,Basic,0,Paid Ad,0
+161,49,Male,Manchester,12,31.71,3.4,4,On-Demand,1,Standard,1,Paid Ad,0
+162,24,Male,Leeds,24,42.3,5.0,4,Live Classes,1,Basic,1,Influencer,0
+163,39,Male,Leeds,28,55.51,3.2,5,Mixed,1,Basic,0,Paid Ad,1
+164,45,Male,Birmingham,8,44.9,0.9,12,Mixed,3,Basic,0,Friend Referral,0
+165,19,Other,London,28,56.27,2.7,7,Live Classes,2,Standard,0,Friend Referral,0
+166,59,Male,Bristol,26,30.22,3.2,2,Live Classes,1,Standard,0,Social Media,0
+167,62,Female,London,8,38.0,4.5,3,Mixed,1,Basic,1,Paid Ad,0
+168,23,Male,London,28,44.67,1.1,10,Mixed,1,Basic,0,Social Media,0
+169,45,Female,London,28,10.0,1.3,46,Live Classes,4,Standard,1,Friend Referral,0
+170,45,Female,Liverpool,27,53.13,2.0,56,On-Demand,1,Basic,0,Paid Ad,1
+171,61,Female,Liverpool,17,12.67,2.0,5,On-Demand,2,Basic,1,Social Media,0
+172,61,Female,London,9,46.96,4.5,7,Live Classes,2,Premium,0,Social Media,0
+173,37,Other,Birmingham,33,43.24,1.9,3,On-Demand,1,Standard,0,Friend Referral,0
+174,47,Male,London,20,10.0,4.0,0,Live Classes,1,Basic,0,Influencer,0
+175,28,Male,Leeds,13,10.0,3.2,5,Live Classes,0,Premium,1,Social Media,0
+176,45,Female,London,28,52.19,3.7,4,Mixed,1,Standard,0,Social Media,0
+177,42,Female,Liverpool,29,49.58,5.1,4,Live Classes,1,Basic,1,Paid Ad,0
+178,56,Female,Manchester,13,24.43,2.7,6,Live Classes,2,Standard,0,Friend Referral,0
+179,50,Female,Nottingham,35,24.42,4.7,2,Mixed,1,Standard,0,Social Media,0
+180,18,Male,London,6,41.15,2.8,2,Mixed,2,Basic,0,Friend Referral,0
+181,44,Male,London,18,34.85,2.4,5,On-Demand,2,Basic,0,Paid Ad,0
+182,30,Male,London,5,47.65,5.8,1,On-Demand,0,Basic,0,Paid Ad,0
+183,58,Female,Newcastle,25,40.75,1.5,19,Live Classes,0,Standard,1,Friend Referral,0
+184,20,Male,Newcastle,2,54.0,1.0,42,On-Demand,2,Basic,1,Social Media,1
+185,56,Male,London,10,46.64,4.7,1,On-Demand,1,Premium,1,Influencer,0
+186,23,Male,Leeds,30,43.65,0.9,9,Live Classes,0,Standard,1,Social Media,0
+187,25,Male,Newcastle,5,30.77,5.1,53,On-Demand,1,Basic,0,Friend Referral,1
+188,44,Female,Birmingham,33,29.9,2.9,3,On-Demand,1,Standard,0,Friend Referral,0
+189,26,Female,Birmingham,1,34.38,5.5,1,Live Classes,1,Basic,0,Paid Ad,1
+190,54,Female,London,18,57.09,4.5,3,Live Classes,1,Standard,1,Friend Referral,0
+191,50,Male,London,32,30.12,3.9,3,Live Classes,2,Standard,0,Paid Ad,0
+192,59,Female,Newcastle,11,38.13,5.7,1,Live Classes,2,Basic,0,Influencer,0
+193,61,Female,Newcastle,21,10.0,2.7,3,Live Classes,1,Standard,0,Paid Ad,0
+194,41,Female,Leeds,26,43.11,5.7,3,Mixed,1,Basic,0,Friend Referral,0
+195,32,Female,London,25,62.09,1.2,2,On-Demand,0,Basic,1,Paid Ad,0
+196,49,Male,London,22,23.8,3.2,0,Mixed,0,Basic,1,Influencer,0
+197,49,Male,Liverpool,27,73.09,2.0,6,Mixed,1,Basic,0,Friend Referral,0
+198,41,Female,Newcastle,13,37.19,3.5,2,Live Classes,0,Premium,1,Friend Referral,0
+199,58,Female,Newcastle,33,10.0,1.4,14,Live Classes,0,Basic,0,Paid Ad,0
+200,29,Male,Bristol,34,30.37,5.1,74,On-Demand,0,Basic,0,Social Media,1

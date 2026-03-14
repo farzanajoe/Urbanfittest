@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanFit – Churn Prediction Results</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body class="results-body">
+
+<header>
+    <div class="logo">
+        <div class="logo-icon"></div>
+        <h1>🏋️UrbanFit</h1>
+    </div>
+    <div class="header-actions">
+        <button class="icon-btn">👤</button>
+        <button class="icon-btn menu-btn">☰</button>
+    </div>
+</header>
+
+<!-- RESULTS TITLE -->
+<section class="results-title-container">
+    <h2 class="results-title">📊 Customer Churn Results</h2>
+    <p class="results-subtitle">Based on customer behaviour data</p>
+</section>
+
+<main class="results-container">
+
+    <!-- TOP METRIC BOXES -->
+    <section class="top-boxes">
+
+        <div class="result-box">
+            <h3>⚠️ Churn Probability (%)</h3>
+            <p class="result-value" id="churnProbability">--</p>
+        </div>
+
+        <div class="result-box">
+            <h3>📊 Churn Risk Level</h3>
+            <p class="result-value" id="riskLevel">--</p>
+        </div>
+
+    </section>
+
+    <!-- TOP CHURN DRIVERS -->
+    <section class="section-block">
+        <h2>📉 Top 3 Churn Drivers</h2>
+        <ul class="impact-list" id="driversList">
+            <li>Loading...</li>
+        </ul>
+    </section>
+
+    <!-- RECOMMENDATIONS -->
+    <section class="section-block">
+        <h2>💡 Recommendations</h2>
+
+        <h4>Short-Term Actions</h4>
+        <ul class="impact-list" id="shortTermList">
+            <li>Loading...</li>
+        </ul>
+
+        <h4>Long-Term Strategies</h4>
+        <ul class="impact-list" id="longTermList">
+            <li>Loading...</li>
+        </ul>
+
+        <p class="impact-conclusion">
+            Increasing engagement and reducing inactivity can significantly reduce the likelihood of churn.
+        </p>
+    </section>
+
+    <!-- BUTTON -->
+    <div class="btn-container">
+        <a href="/" class="btn-primary">Back to Predictor</a>
+    </div>
+
+</main>
+
+<!-- Bottom Navigation -->
+<nav class="bottom-nav">
+    <a href="/" class="nav-item">
+        <span class="nav-icon">📟</span>
+        <span class="nav-label">Predict</span>
+    </a>
+</nav>
+
+<script>
+    const result = JSON.parse(sessionStorage.getItem("churnResult"));
+
+    if (!result) {
+        document.querySelector(".results-container").innerHTML =
+            "<p style='text-align:center;padding:2rem'>No prediction data found. <a href='/'>Go back and submit the form.</a></p>";
+    } else {
+        // Probability & Risk
+        document.getElementById("churnProbability").textContent = (result.probability * 100).toFixed(1) + "%";
+        document.getElementById("riskLevel").textContent = result.risk;
+
+        // Colour code risk
+        const riskEl = document.getElementById("riskLevel");
+        if (result.risk === "HIGH") riskEl.style.color = "#e74c3c";
+        else if (result.risk === "MEDIUM") riskEl.style.color = "#f39c12";
+        else riskEl.style.color = "#27ae60";
+
+        // Top 3 drivers
+        const driverIcons = ["⏳", "🏋️", "📅"];
+        const driversList = document.getElementById("driversList");
+        driversList.innerHTML = result.drivers.map((d, i) =>
+            `<li>${driverIcons[i] || "🔹"} <strong>${d}</strong></li>`
+        ).join("");
+
+        // Recommendations
+        const shortTermList = document.getElementById("shortTermList");
+        const longTermList = document.getElementById("longTermList");
+
+        if (result.short_term && result.short_term.length > 0) {
+            shortTermList.innerHTML = result.short_term.map(r => `<li>📩 ${r}</li>`).join("");
+        } else {
+            shortTermList.innerHTML = "<li>No short-term actions generated.</li>";
+        }
+
+        if (result.long_term && result.long_term.length > 0) {
+            longTermList.innerHTML = result.long_term.map(r => `<li>🎯 ${r}</li>`).join("");
+        } else {
+            longTermList.innerHTML = "<li>No long-term strategies generated.</li>";
+        }
+    }
+</script>
+
+</body>
+</html>
